@@ -21,6 +21,14 @@ NEWSPIDER_MODULE = 'Miapp.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+ITEM_PIPELINES = {
+  'scrapy_mongodb.MongoDBPipeline': 100
+}
+
+MONGODB_URI = 'mongodb://127.0.0.1:27017'
+MONGODB_DATABASE = 'scrapy'
+MONGODB_COLLECTION = 'mitest'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
